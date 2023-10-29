@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.product.model.mapper.ProductMapper">
+
+	<resultMap type="productDto" id="product">
+		<result column="code" property="code"/>
+		<result column="id" property="id"/>
+		<result column="price" property="price"/>
+		<result column="model" property="model"/>
+	</resultMap>
+	
+	<select id="listProduct"  resultMap="product">
+		select *
+		from product 
+	</select>
+	
+	
+</mapper>
